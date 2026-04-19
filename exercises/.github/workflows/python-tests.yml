@@ -1,0 +1,15 @@
+name: 1. Env Variables
+on: [worflow_dispatch]
+env: 
+  GLOBAL_USER: "estudiante_edem"
+
+jobs:
+  job1: 
+    runs-on: ubuntu-latest
+    steps:
+        run: echo "El usuario en Job1 es $GLOBAL_USER"
+
+  job2: 
+    runs-on: ubuntu-latest
+    steps:
+        run: echo "El usuario en Job2 es $GLOBAL_USER"
